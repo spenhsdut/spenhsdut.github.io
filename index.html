@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<head>
+   <style type="text/css">
+        table audio {
+            width: 185px;
+        }
+    </style>
+
+    <title>spenhsdut</title>
+</head>
+
+
+<body>
+<div class="jumbotron text-center">
+    <h1>spenhsdut.github.io功能展示页面-标题</h1>
+</div>
+<div class="container">
+    <div class="mx-auto text-center mb-3">
+        <p>
+			<a href="#">作者1</a><sup>1</sup>, 
+			<a href="#">Author2</a><sup>1</sup>, 
+			<a href="#">Author3</a><sup>2</sup>,
+			<a href="#">Author4</a><sup>3</sup>
+        </p>
+		<div id="belong" style="font-size: 10px;">
+			<p>(1. 山东理工大学计算机科学与技术学院，山东 淄博 255000)</p>
+			<p>(2. Shandong University of science and technology)</p>
+			<p>(3. SDUT)</p>
+		</div>
+        <!-- <ul class="list-unstyled">
+            <li>*indicates equal contribution</li>
+        </ul> -->
+        <p>[论文下载： <a href="#">(中国知网)</a>，<a href="#">(arXiv)</a>]</p>
+    </div>
+	
+    <div class="row">
+        <h2>Evaluation Results</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>CSIG</th>
+                    <th>CBAK</th>
+                    <th>COVL</th>
+                    <th>PESQ</th>
+                    <th>SSNR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">算法1 <a href="#ref1"><sup>1</sup></a></th>
+                    <td>3.23</td>
+                    <td>2.68</td>
+                    <td>2.67</td>
+                    <td>2.22</td>
+                    <td>5.07</td>
+                </tr>
+                <tr>
+                    <th scope="row">算法2 <a href="#ref2"><sup>2</sup></a></th>
+                    <td>3.48</td>
+                    <td>2.94</td>
+                    <td>2.80</td>
+                    <td>2.16</td>
+                    <td>7.73</td>
+                </tr>
+                <tr>
+                    <th scope="row">算法3 <a href="#ref3"><sup>3</sup></a></th>
+                    <td>3.62</td>
+                    <td>3.23</td>
+                    <td>2.98</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th scope="row">算法4 <a href="#ref4"><sup>4</sup></a></th>
+                    <td>3.80</td>
+                    <td>3.12</td>
+                    <td>3.14</td>
+                    <td>2.53</td>
+                    <td>-</td>
+                </tr>
+                <tr class="table-active">
+                    <th scope="row">算法5 (ours)</th>
+                    <td>3.85</td>
+                    <td>3.39</td>
+                    <td>3.27</td>
+                    <td>2.70</td>
+                    <td>10.22</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+    <div class="row">
+        <h2>Audio Samples</h2>
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Sample 1</th>
+                    <th>Sample 2</th>
+                    <th>Sample 3</th>
+                    <th>Sample 4</th>
+                    <th>Sample 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Noisy input</th>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p232_036-noisy.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p232_170-noisy.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p232_415-noisy.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p257_070-noisy.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p257_395-noisy.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">SEGAN</th>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p232_036-segan.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p232_170-segan.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p232_415-segan.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p257_070-segan.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p257_395-segan.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Wavenet</th>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p232_036-wvnet.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p232_170-wvnet.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p232_415-wvnet.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p257_070-wvnet.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p257_395-wvnet.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Ours</th>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p232_036-ours.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p232_170-ours.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p232_415-ours.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p257_070-ours.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="assets/p257_395-ours.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <h2>Citation</h2>
+    </div>
+    <div class="row">
+        <pre><code>主要责任者.文献题名[J].刊名,年,卷(期):起止页码.</code></pre>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <h2>References</h2>
+    </div>
+    <div class="row">
+        <ol>
+            <li id="ref1">参考文献1</li>
+            <li id="ref2">参考文献1</li>
+            <li id="ref3">参考文献1</li>
+            <li id="ref4">参考文献4</li>
+        </ol>
+    </div>
+</body>
