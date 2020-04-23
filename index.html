@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <head>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
    <style type="text/css">
         table audio {
             width: 185px;
@@ -44,50 +43,100 @@
                     <th>CBAK</th>
                     <th>COVL</th>
                     <th>PESQ</th>
-                    <th>SSNR</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">算法1 <a href="#ref1"><sup>1</sup></a></th>
+                    <th scope="row">Wiener<a href="#ref1"><sup>1</sup></a></th>
                     <td>3.23</td>
                     <td>2.68</td>
                     <td>2.67</td>
                     <td>2.22</td>
-                    <td>5.07</td>
                 </tr>
                 <tr>
-                    <th scope="row">算法2 <a href="#ref2"><sup>2</sup></a></th>
+                    <th scope="row">SEGAN<a href="#ref2"><sup>2</sup></a></th>
                     <td>3.48</td>
                     <td>2.94</td>
                     <td>2.80</td>
                     <td>2.16</td>
-                    <td>7.73</td>
                 </tr>
                 <tr>
-                    <th scope="row">算法3 <a href="#ref3"><sup>3</sup></a></th>
+                    <th scope="row">Wavenet<a href="#ref3"><sup>3</sup></a></th>
                     <td>3.62</td>
                     <td>3.23</td>
                     <td>2.98</td>
-                    <td>-</td>
-                    <td>-</td>
+                    <td>None</td>
                 </tr>
                 <tr>
-                    <th scope="row">算法4 <a href="#ref4"><sup>4</sup></a></th>
+                    <th scope="row">MMSE-GAN<a href="#ref4"><sup>4</sup></a></th>
                     <td>3.80</td>
                     <td>3.12</td>
                     <td>3.14</td>
                     <td>2.53</td>
-                    <td>-</td>
                 </tr>
-                <tr class="table-active">
-                    <th scope="row">算法5 (ours)</th>
-                    <td>3.85</td>
-                    <td>3.39</td>
-                    <td>3.27</td>
-                    <td>2.70</td>
-                    <td>10.22</td>
-                </tr>
+				<tr>
+				    <th scope="row">Deep Feature Loss<a href="#ref5"><sup>5</sup></a></th>
+				    <td>3.86</td>
+				    <td>3.33</td>
+				    <td>3.22</td>
+				    <td>None</td>
+				</tr>
+				<tr>
+				    <th scope="row">Coarse-to-ﬁne Optimization<a href="#ref6"><sup>6</sup></a></th>
+				    <td>4.00</td>
+				    <td>3.34</td>
+				    <td>3.34</td>
+				    <td>2.69</td>
+				</tr>
+				<tr>
+				    <th scope="row">SE-FFTNET<a href="#ref7"><sup>7</sup></a></th>
+				    <td>3.60</td>
+				    <td>3.20</td>
+				    <td>2.98</td>
+				    <td>2.37</td>
+				</tr>
+				<tr>
+				    <th scope="row">PHASEN<a href="#ref8"><sup>8</sup></a></th>
+				    <td>4.21</td>
+				    <td>3.55</td>
+				    <td>3.62</td>
+				    <td>2.99</td>
+				</tr>
+				<tr>
+				    <th scope="row">MDPhD<a href="#ref9"><sup>9</sup></a></th>
+				    <td>3.85</td>
+				    <td>3.39</td>
+				    <td>3.27</td>
+				    <td>2.70</td>
+				</tr>
+				<tr>
+				    <th scope="row">CGRN(frame shift = 256)<a href="#ref10"><sup>10</sup></a></th>
+				    <td>4.20</td>
+				    <td>3.33</td>
+				    <td>3.52</td>
+				    <td>2.80</td>
+				</tr>
+				<tr>
+				    <th scope="row">CGRN(frame shift = 128)<a href="#ref11"><sup>11</sup></a></th>
+				    <td>4.25</td>
+				    <td>3.41</td>
+				    <td>3.59</td>
+				    <td>2.88</td>
+				</tr>
+				<tr>
+				    <th scope="row">BICGRN(frame shift = 256)<a href="#ref12"><sup>12</sup></a></th>
+				    <td>4.35</td>
+				    <td>3.45</td>
+				    <td>3.70</td>
+				    <td>3.00</td>
+				</tr>
+				<tr>
+				    <th scope="row">BICGRN(frame shift = 128)<a href="#ref13"><sup>13</sup></a></th>
+				    <td>4.37</td>
+				    <td>3.51</td>
+				    <td>3.75</td>
+				    <td>3.07</td>
+				</tr>
             </tbody>
         </table>
     </div>
@@ -111,134 +160,303 @@
                     <th scope="row">Noisy input</th>
                     <td>
                         <audio controls>
-                            <source src="assets/p232_036-noisy.wav" type="audio/wav">
+                            <source src="ndresult/Noisy/p232_036.wav" type="audio/wav">
                                 Your browser does not support the audio element.
                         </audio>
                     </td>
                     <td>
                         <audio controls>
-                            <source src="assets/p232_170-noisy.wav" type="audio/wav">
+                            <source src="ndresult/Noisy/p232_170.wav" type="audio/wav">
                                 Your browser does not support the audio element.
                         </audio>
                     </td>
                     <td>
                         <audio controls>
-                            <source src="assets/p232_415-noisy.wav" type="audio/wav">
+                            <source src="ndresult/Noisy/p232_415.wav" type="audio/wav">
                                 Your browser does not support the audio element.
                         </audio>
                     </td>
                     <td>
                         <audio controls>
-                            <source src="assets/p257_070-noisy.wav" type="audio/wav">
+                            <source src="ndresult/Noisy/p257_070.wav" type="audio/wav">
                                 Your browser does not support the audio element.
                         </audio>
                     </td>
                     <td>
                         <audio controls>
-                            <source src="assets/p257_395-noisy.wav" type="audio/wav">
+                            <source src="ndresult/Noisy/p257_395.wav" type="audio/wav">
                                 Your browser does not support the audio element.
                         </audio>
                     </td>
                 </tr>
+				<tr>
+				    <th scope="row">SEGAN</th>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/SEGAN/p232_036.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/SEGAN/p232_170.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/SEGAN/p232_415.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/SEGAN/p257_070.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/SEGAN/p257_395.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				</tr>
+				<tr>
+				    <th scope="row">Wavenet</th>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/Wavenet/p232_036.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/Wavenet/p232_170.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/Wavenet/p232_415.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/Wavenet/p257_070.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/Wavenet/p257_395.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				</tr>
+				<!-- MSE-GAN 没有 -->
+				<tr>
+				    <th scope="row">Deep Feature Loss</th>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/Deep_Feature_Loss/p232_036.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/Deep_Feature_Loss/p232_170.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/Deep_Feature_Loss/p232_415.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/Deep_Feature_Loss/p257_070.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/Deep_Feature_Loss/p257_395.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				</tr>
+				<!-- Coarse-to-fine Optimization 没有 -->
+				<!-- SE-FFTNET 没有 -->
+				<!-- PHASEN 没有 -->
+				<tr>
+				    <th scope="row">MDPhD</th>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/MDPhD/p232_036.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/MDPhD/p232_170.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/MDPhD/p232_415.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/MDPhD/p257_070.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/MDPhD/p257_395.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				</tr>
                 <tr>
-                    <th scope="row">SEGAN</th>
+                    <th scope="row">CGRN(frame shift = 256)</th>
                     <td>
                         <audio controls>
-                            <source src="assets/p232_036-segan.wav" type="audio/wav">
+                            <source src="ndresult/CGRN256/p232_036.wav" type="audio/wav">
                                 Your browser does not support the audio element.
                         </audio>
                     </td>
                     <td>
                         <audio controls>
-                            <source src="assets/p232_170-segan.wav" type="audio/wav">
+                            <source src="ndresult/CGRN256/p232_170.wav" type="audio/wav">
                                 Your browser does not support the audio element.
                         </audio>
                     </td>
                     <td>
                         <audio controls>
-                            <source src="assets/p232_415-segan.wav" type="audio/wav">
+                            <source src="ndresult/CGRN256/p232_415.wav" type="audio/wav">
                                 Your browser does not support the audio element.
                         </audio>
                     </td>
                     <td>
                         <audio controls>
-                            <source src="assets/p257_070-segan.wav" type="audio/wav">
+                            <source src="ndresult/CGRN256/p257_070.wav" type="audio/wav">
                                 Your browser does not support the audio element.
                         </audio>
                     </td>
                     <td>
                         <audio controls>
-                            <source src="assets/p257_395-segan.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                        </audio>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">Wavenet</th>
-                    <td>
-                        <audio controls>
-                            <source src="assets/p232_036-wvnet.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                        </audio>
-                    </td>
-                    <td>
-                        <audio controls>
-                            <source src="assets/p232_170-wvnet.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                        </audio>
-                    </td>
-                    <td>
-                        <audio controls>
-                            <source src="assets/p232_415-wvnet.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                        </audio>
-                    </td>
-                    <td>
-                        <audio controls>
-                            <source src="assets/p257_070-wvnet.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                        </audio>
-                    </td>
-                    <td>
-                        <audio controls>
-                            <source src="assets/p257_395-wvnet.wav" type="audio/wav">
+                            <source src="ndresult/CGRN256/p257_395.wav" type="audio/wav">
                                 Your browser does not support the audio element.
                         </audio>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row">Ours</th>
-                    <td>
-                        <audio controls>
-                            <source src="assets/p232_036-ours.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                        </audio>
-                    </td>
-                    <td>
-                        <audio controls>
-                            <source src="assets/p232_170-ours.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                        </audio>
-                    </td>
-                    <td>
-                        <audio controls>
-                            <source src="assets/p232_415-ours.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                        </audio>
-                    </td>
-                    <td>
-                        <audio controls>
-                            <source src="assets/p257_070-ours.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                        </audio>
-                    </td>
-                    <td>
-                        <audio controls>
-                            <source src="assets/p257_395-ours.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                        </audio>
-                    </td>
-                </tr>
+				<tr>
+				    <th scope="row">CGRN(frame shift = 128)</th>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/CGRN128/p232_036.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/CGRN128/p232_170.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/CGRN128/p232_415.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/CGRN128/p257_070.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/CGRN128/p257_395.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				</tr>
+				<tr>
+				    <th scope="row">BICGRN(frame shift = 256)</th>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/BICGRN256/p232_036.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/BICGRN256/p232_170.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/BICGRN256/p232_415.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/BICGRN256/p257_070.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/BICGRN256/p257_395.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				</tr>
+				<tr>
+				    <th scope="row">BICGRN(frame shift = 128)</th>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/BICGRN128/p232_036.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/BICGRN128/p232_170.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/BICGRN128/p232_415.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/BICGRN128/p257_070.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				    <td>
+				        <audio controls>
+				            <source src="ndresult/BICGRN128/p257_395.wav" type="audio/wav">
+				                Your browser does not support the audio element.
+				        </audio>
+				    </td>
+				</tr>
             </tbody>
         </table>
     </div>
@@ -259,10 +477,22 @@
     </div>
     <div class="row">
         <ol>
-            <li id="ref1">参考文献1</li>
-            <li id="ref2">参考文献1</li>
-            <li id="ref3">参考文献1</li>
-            <li id="ref4">参考文献4</li>
+            <li id="ref1">Scalart P, Filho J V. Speech enhancement based on a priori signal to noise estimation[C]. international conference on acoustics speech and signal processing, 1996: 629-632.</li>
+            <li id="ref2">Pascual S, Bonafonte A, Serra J, et al. SEGAN: Speech Enhancement Generative Adversarial Network[C]. conference of the international speech communication association, 2017: 3642-3646.</li>
+            <li id="ref3">Rethage D, Pons J, Serra X, et al. A Wavenet for Speech Denoising[C]. international conference on acoustics, speech, and signal processing, 2018: 5069-5073.</li>
+            <li id="ref4">Soni M H, Shah N, Patil H A, et al. Time-Frequency Masking-Based Speech Enhancement Using Generative Adversarial Network[C]. international conference on acoustics, speech, and signal processing, 2018: 5039-5043.</li>
+			<li id="ref5">Germain F G, Chen Q, Koltun V, et al. Speech Denoising with Deep Feature Losses[J]. arXiv: Audio and Speech Processing, 2018.</li>
+			<li id="ref6">Yao J, Aldahle A. Coarse-to-fine Optimization for Speech Enhancement[J]. arXiv: Sound, 2019.</li>
+			<li id="ref7">Shifas P V, Adiga N, Tsiaras V, et al. A Non-Causal FFTNet Architecture for Speech Enhancement[C]. conference of the international speech communication association, 2019.</li>
+			<li id="ref8">Yin D, Luo C, Xiong Z, et al. PHASEN: A Phase-and-Harmonics-Aware Speech Enhancement Network[J]. arXiv: Sound, 2019.</li>
+			<li id="ref9">Kim J, Yoo J, Chun S, et al. Multi-Domain Processing via Hybrid Denoising Networks for Speech Enhancement.[J]. arXiv: Audio and Speech Processing, 2018.</li>
+			<li id="ref10"></li>
+			<li id="ref11"></li>
+			<li id="ref12"></li>
+			<li id="ref13"></li>
+			
         </ol>
     </div>
 </body>
+
+
